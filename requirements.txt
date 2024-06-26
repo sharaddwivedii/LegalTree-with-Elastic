@@ -1,0 +1,9 @@
+langchain
+PyPDF2
+python-dotenv
+streamlit
+openai
+langchain_openai
+streamlit_chat
+elasticsearch
+langchain_elasticsearch
