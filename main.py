@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.embeddings import OpenAIEmbeddings
-from elasticsearch import Elasticsearch, ElasticSearch
+from elasticsearch import Elasticsearch
 from langchain_elasticsearch import ElasticsearchRetriever
 from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import OpenAI
