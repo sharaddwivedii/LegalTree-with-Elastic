@@ -52,7 +52,7 @@ def main():
           length_function=len
       ).split_text(raw_text)
 
-      embeddings = OpenAIEmbeddings()  # Choose your preferred embedding method here
+      embeddings = OpenAIEmbeddings() 
 
       es = Elasticsearch("http://localhost:9200")
       for i, chunk in enumerate(text_chunks):
@@ -69,7 +69,7 @@ def main():
           memory=memory
       )
 
-      st.session_state['uploaded_pdfs'] = pdf_docs  # Store uploaded PDFs for future use
+      st.session_state['uploaded_pdfs'] = pdf_docs  
       st.session_state.conversation = conversation_chain
 
   # Handle user input if provided
@@ -78,6 +78,5 @@ def main():
     st.session_state.chat_history.append({'message': user_question, 'is_user': True})
     st.session_state.chat_history.append({'message': response['chat_history'], 'is_user': False})
 
-        # Display chat messages using streamlit-chat
     for chat in st.session_state.chat_history:
         message(chat['message'], is_user=chat['is_user'])
